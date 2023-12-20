@@ -1,0 +1,594 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: Arial,sans-serif;
+    font-size:16px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;   
+  /* 垂直置中 */
+  align-items: center;
+}
+
+
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-section input {
+  padding: 10px;
+  width: 30%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.add-btn, .delete-btn {
+  padding: 7px;
+  background-color: #007bff;
+  margin-left: 10px;
+  color: white;
+  width: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: transparent; 
+  color: #ff4136; 
+  font-size:25px;
+}
+
+.item-list {
+  padding: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.cancel-btn, .submit-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #aaa;
+  color: white;
+}
+
+.submit-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+//AddNewCourse
+
+.form-section {
+  margin: 20px;
+  border-radius: 10px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+select[type="select"] {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+input[type="number"]{
+    padding: 10px;
+    margin-right:10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="type"],
+input[type="number"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+  margin-right: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+//ManagerChapter
+.switchButton{
+    float:right;
+    font-size:18px;
+    padding:10px;
+    background-color:white;
+    color:black;
+    border:none;
+    cursor:pointer;
+    border-radius: 10%;
+
+}
+
+.switchButton:hover{
+    background-color: #e0e0e0;  
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.break1{
+    margin-bottom:50px;
+}
+
+.line1 {
+     border: 1px solid #ccc; 
+}
+
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: #ffffff;
+}
+
+li{
+    float:left;
+    display:block;
+    text-align:center;
+    padding:10px 14px;   
+}
+
+li a{
+    color:black;
+    text-decoration:none;
+}
+
+li.rightside:hover{
+    background-color: #e0e0e0;  
+    font-weight: bold;
+}
+
+li.rightside{
+    float:right;
+    color:black;
+}
+
+/*管理教材*/
+.blueButton{
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left:13px;
+    font-size: 18px;
+    background-color: #6F74FF; /* 紫蓝色 */
+    color: #fff; /* 字体颜色 */
+    border: 0.8px solid #000; /* 黑色边框 */
+    text-decoration: none; /* 去除链接的下划线样式，如果是链接的话 */
+    border-radius: 10px; /* 添加弧度，可以根据需要调整数值 */
+    /* 过渡效果，使悬停时平滑过渡 */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.blueButton:hover{
+    background-color: #483D8B; /* 深一点的紫蓝色 */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* 或者根據需要設置 */
+}
+
+
+/*停開課程*/
+.redButton{
+    font-size: 14px;
+    background-color: #d74242; /* 紅色 */
+    color: #fff;
+    border: 0.8px solid #000;
+    border-radius: 10px;
+    bottom: 30px; /* 距離底部的距離 */
+    position: center;
+}
+
+.redButton:hover{
+    background-color: #a63030;
+}
+
+
+/* 樣式設定 */
+.classDropdown {
+    display: inline-block;
+    width: 90%; /* 設定寬度為父元素寬度的90% */
+    max-width:700px; /* 設定最大寬度，避免在大螢幕上寬度過寬 */
+    padding: 10px 20px; /* 設定內邊距，調整按鈕大小 */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0.5px solid #000000; /* 設定邊框顏色 */
+    color: #000000; /* 設定文字顏色 */
+    background-color: white; /* 設定背景顏色 */
+    cursor: pointer;
+    border-radius: 5px; /* 設定圓角 */
+    transition: background-color 0.3s, font-weight 0.3s;
+  }
+  
+  /* 滑鼠懸停時的效果 */
+  .classDropdown:hover {
+    background-color:  #3d437c; /* 設定懸停時的背景顏色 */
+    color: white; /* 設定懸停時的文字顏色 */
+    font-weight: bold;
+  }
+
+  .dropdown-container {
+    position: center;
+  }
+
+  .dropdown-content{
+    display:none;
+    width: 50%; /* 設定寬度為父元素寬度的90% */
+    position: absolute;
+    color:#000000;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 13%; /* 位於畫面水平中央 */
+  }
+
+/* 下拉內容的連結樣式 */
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropdown-content li {
+    box-sizing: border-box; /* 避免寬度超過 */
+    width: 100%; /* 每個項目佔滿一行 */
+    padding: 12px;
+    float:center;
+    text-align: center; /* 文字置中 */
+    border: 1px solid #ccc; /* 邊框 */
+    border-radius: 5px; /* 圓角 */
+    margin-bottom: 0px; /* 下方間隔 */
+}
+
+/* 下拉內容的連結懸停效果 */
+.dropdown-content li:hover {
+    background-color: #cbcdde;
+    color: white; /* 設定懸停時的文字顏色 */
+    font-weight: bold;
+}
+
+
+
+/*nav*/
+/* tingtest.css */
+
+/* tingtest.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(213, 201, 249); /* 背景色设为白色 */
+    padding: 10px 20px;
+    margin:auto;
+    border-radius: 5px; /* 圓角 */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: black; /* 字体颜色设为黑色 */
+  }
+  
+  .navbar .dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: #c3d3eb;
+    padding: 10px;
+  }
+  
+  .dropdown:hover ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+ .dropdown ul:hover{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar .dropdown ul:hover{
+    background-color:#3d437c ;
+  }
+  .navbar .dropdown ul li {
+    margin: 10px 0;
+    box-sizing: border-box; /* 避免寬度超過 */
+    width: 100%; /* 每個項目佔滿一行 */
+    padding: 12px;
+    float:center;
+    text-align: center; /* 文字置中 */
+    border: 1px solid #ccc; /* 邊框 */
+    border-radius: 5px; /* 圓角 */
+    margin-bottom: 0px; /* 下方間隔 */
+    background-color:#3d437c ;
+  }
+  
+  /* 将导航字体置于屏幕中央 */
+  .navbar ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .d_flex{
+    display: flex;
+}
+.flex_col{
+    flex-direction: column;
+}
+.px_10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px_50{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.py_10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py_30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.div_nonestyle {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* div{
+    background-color: aquamarine;
+} */
+.bg_grey{
+    background-color: grey;
+}
+.justify_end{
+    justify-content: flex-end;
+}
+.justify_spacearound{
+    justify-content: space-around;
+}
+.justify_spacebetween{
+    justify-content: space-between;
+}
+.justify_center{
+    justify-content: center;
+}
+.justify_start{
+    justify-content: flex-start;
+}
+
+.buttom_border{
+    border-bottom: 1px solid black;
+}
+.course_div_size{
+    height: 10%;
+    width: 75%;
+}
+.course_color{
+    background-color: gray;
+}
+.progress_div_size{
+    height: 10px;
+    width: 50%;
+}
+.progress_size{
+    height: 10px;
+}
+.w_350{
+    width: 350px;
+}
+/* 導覽列 */
+nav {
+    background-color: white;
+    width: auto;
+    height: 30%;
+}
+nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 字體 */
+a {
+    color: inherit;
+    font-size: 16px;
+    text-decoration: none;
+}
+.text_center{
+    text-align: center;
+}
+.text_end{
+    text-align: end;
+}
+.text_left{
+    text-align: left;
+}
+.font_12{
+    font-size: 12px;
+}
+.font_20{
+    font-size: 20px;
+}
+/* 篩選列 */
+select {
+    border: 1px solid grey;
+    height: 25px;
+}
+.course_photo{
+    width: 140px;
+    height: 140px;
+}
+
+
+/* 排版 */
+.align_center{
+    align-items: center;
+}
+.input{
+    width:auto;
+    height: 15%;
+    border-radius: 15px;
+}
+/* 邊界 */
+.m_0{
+    margin: 0;
+}
+.m_10{
+    margin: 10px;
+}
+.mt_10{
+    margin-top: 10px;
+}
+.mt_30{
+    margin-top: 30px;
+}
+.mb_10{
+    margin-bottom: 10px;
+}
+.mr_0{
+    margin-right: 0;
+}
+.mr_20{
+    margin-right: 20px;
+}
+.mr_30{
+    margin-right: 30px;
+}
+.ml_10{
+    margin-left: 10px;
+}
+.p_0{
+    padding: 0;
+}
+.pt_10{
+    padding-top: 10px;
+}
+.pt_30{
+    padding-top: 30px;
+}
+.pr_50{
+    padding-right: 50px;
+}
+/* 尺寸 */
+.w_10{
+    width: 10%;
+}
+.w_95{
+    width: 95%;
+}
+.w_100{
+    width: 100%;
+}
+.h_30{
+    height: 30%;
+}
+.h_500px{
+    height: 500px;
+}
+.h_100{
+    height: 100%;
+}
+.h_180px{
+    height: 180px;
+}
+
+/* 顏色 */
+/* 邊框 */
+/* hr{
+    height: 0;
+    margin: 0;
+    border: 0;
+} */

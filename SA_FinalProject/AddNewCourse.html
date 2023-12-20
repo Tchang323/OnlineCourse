@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AddNewCourse</title>
+    <link rel="stylesheet" href="/ManageChapter.css" />
+  </head>
+
+  <form method="post" class="form-data">
+    <div class="flex">
+      <label>新增課程</label>
+      <label>切換人員</label>
+    </div>
+
+    <hr class="line1" />
+    <div class="form-section">
+      <label className="w-60" for="title">課程名稱</label>
+      <input type="text" id="input" name="title" placeholder="輸入課程名稱" />
+    </div>
+
+    <div class="form-section">
+      <label for="message">簡介</label>
+      <textarea
+        type="message"
+        id="message"
+        name="message"
+        placeholder="輸入課程簡介"
+      ></textarea>
+    </div>
+
+    <div class="flex">
+      <div class="form-section">
+        <label for="type">課程類別</label>
+        <input type="type" id="input" name="type" />
+      </div>
+      <div class="form-section">
+        <label for="price">價格(選填)</label>
+        <div class="flex">
+          <input type="number" id="input" name="price" />
+          <select id="select" type="select" name="select">
+            <option value="TWD">新台幣</option>
+            <option value="USD">美金</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label>證書(可跳過)</label>
+      <input
+        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+        id="user_avatar"
+        type="file"
+      />
+    </div>
+    <div class="form-section">
+      <label>上傳照片</label>
+      <input
+        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+        id="user_avatar"
+        type="file"
+      />
+    </div>
+
+    <div class="form-buttons">
+      <button type="reset">取消</button>
+      <button type="continue">繼續</button>
+    </div>
+  </form>
+</html>

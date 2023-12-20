@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AddNewChapter</title>
+    <link rel="stylesheet" href="ManageChapter.css" />
+  </head>
+
+  <form action="#" method="post">
+    <div class="flex">
+      <label>新增課程</label>
+      <label>切換人員</label>
+    </div>
+    <hr class="line1" />
+    <div class="form-section">
+      <label for="section-input">新增章節</label>
+      <div class="flex">
+        <input type="text" id="section-input" placeholder="輸入章節名稱" />
+        <button class="add-btn">新增</button>
+      </div>
+
+      <div class="item-list">
+        <div class="item">
+          <span>第一章 XXX</span>
+          <button class="delete-btn">×</button>
+        </div>
+        <div class="item">
+          <span>第二章 XXX</span>
+          <button class="delete-btn">×</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="sub-section-input">新增小節</label>
+      <div class="flex">
+        <select id="select" type="select" name="select">
+          <option value=>第一小節</option>
+          <option value=>第二小節</option>
+        </select>
+        <input
+          type="text"
+          id="sub-section-input"
+          placeholder="輸入小節名稱"
+        /><button class="add-btn">新增</button>
+      </div>
+
+      <div class="item-list">
+        <div class="item">
+          <span>1.1 XXXXXXX</span>
+          <button class="delete-btn">×</button>
+        </div>
+        <div class="item">
+          <span>1.2 XXX</span>
+          <button class="delete-btn">×</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="cancel-btn">取消</button>
+      <button class="submit-btn">確認新增</button>
+    </div>
+  </form>
+</html>
