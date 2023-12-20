@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chapter</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <div>
+      <button class="switchButton">切換身份</button>
+    </div>
+    <br class="break1" />
+    <hr id="line1" />
+    <div>
+      <ul>
+        <li>課程名稱</li>
+        <!--抓課程名稱 -->
+        <li class="rightside"><a href="reportques">問題回報</a></li>
+        <li class="rightside"><a href="discussion">討論區</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div>
+      <button class="blueButton">管理教材</button>
+    </div>
+    <br class="break1" />
+    <div class="center-container">
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">第一章</a>
+            <ul class="dropdown-content">
+              <li><a href="#">上課教材一</a></li>
+              <li><a href="#">上課教材二</a></li>
+              <li><a href="#">上課教材三</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <button class="redButton">停開課程</button>
+
+    <script>
+      // 獲取所有的下拉按鈕
+      var dropdowns = document.getElementsByClassName("dropbtn");
+      for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].addEventListener("click", function () {
+          // 獲取下拉內容
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

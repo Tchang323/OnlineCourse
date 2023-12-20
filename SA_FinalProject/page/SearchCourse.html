@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SearchCourse</title>
+		<link rel="stylesheet" href="../style/global.css">
+	</head>
+	<body>
+        <nav class="align_center py_10 buttom_border">
+		    <ul class="d_flex px_10 justify_spacearound">
+                <li><a href="#">首頁</a></li>
+                <li>
+                    <input class="px_10 text_end input" type="text" placeholder="搜尋文字">
+                </li>
+                <li><a href="#">切換身分</a></li>
+                <li><a href="#">我的課程</a></li>
+                <li><a href="#">個人資料</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="d_flex px_10">
+                <li>
+                    <!-- 評分下拉式選單 -->
+                    <select class="m_10" type="smallselect">
+                        <option value="">評分</option>
+                        <option value="1">由高到低</option>
+                        <option value="2">由低到高</option>
+                    </select>
+                </li>
+                <li>
+                    <!-- 類別下拉式選單 -->
+                    <select class="m_10" type="smallselect">
+                        <option value="">類別</option>
+                        <option value="1">數學</option>
+                        <option value="2">機器學習</option>
+                    </select>
+                </li>
+                <li class="m_10"><a>排序方式</a></li>
+            </ul>
+        </nav>
+        <div class="d_flex flex_col px_50 justify_center">
+            <div class="d_flex mt_30 pt_30 course_color h_180px" >
+                <img class="course_photo align_center ml_10 mr_30" src="../public/133.png">
+                <div  class="d_flex flex_col w_100 pr_50">
+                    <h2 class="mt_10 mb_10">標題</h2>
+                    <div class="h_30">
+                        內文XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx
+                    </div>
+                    作者
+                    <div class="d_flex justify_spacebetween pt_10">
+                        評分
+                        <hr>
+                        NT $499
+                    </div>
+                </div>
+            </div>
+                <div class="d_flex mt_30 pt_30 course_color h_180px">
+                    <img class="course_photo align_center ml_10 mr_30" src="../public/133.png">
+                    <div  class="d_flex flex_col w_100 pr_50">
+                        <h2 class="mt_10 mb_10">標題</h2>
+                        <div class="h_30">
+                            內文XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx
+                        </div>
+                        作者
+                        <div class="d_flex justify_spacebetween pt_10">
+                            評分
+                            <hr>
+                            NT $499
+                        </div>
+                    </div>
+                </div>
+        </div>
+</html>

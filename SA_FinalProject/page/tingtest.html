@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chapter</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <nav class="align_center py_10 bottom_border">
+      <ul class="d_flex px_10 justify_spacearound">
+        <li class="dropdown">
+          <a href="#" id="dropdownMenuLink">第一章</a>
+          <ul id="dropdownMenu" class="dropdown-content" style="display: none">
+            <li><a href="#">上課教材一</a></li>
+            <li><a href="#">上課教材二</a></li>
+            <li><a href="#">上課教材三</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      // 獲取下拉選單連結和下拉選單本身
+      var dropdownLink = document.getElementById("dropdownMenuLink");
+      var dropdownMenu = document.getElementById("dropdownMenu");
+
+      // 為下拉選單連結添加點擊事件監聽器
+      dropdownLink.addEventListener("click", function (event) {
+        // 阻止連結的默認行為
+        event.preventDefault();
+
+        // 切換下拉選單的顯示和隱藏
+        if (dropdownMenu.style.display === "none") {
+          dropdownMenu.style.display = "block";
+        } else {
+          dropdownMenu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

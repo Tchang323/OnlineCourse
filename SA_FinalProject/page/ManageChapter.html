@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Chapter</title>
+        <link rel="stylesheet" href="../style/global.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        
+        <div>
+           <button class="switchButton">切換身份</button>   
+        </div>
+        <br class="break1">
+        <hr class="line1"> 
+        <div>
+            <ul>
+                <li>課程名稱</li>     <!--抓課程名稱 -->
+                <li class="rightside"><a href="reportques">問題回報</a></li>
+                <li class="rightside"><a href="discussion">討論區</a></li>
+            </ul>
+        </div>
+        <hr id="line1">
+        <div>
+            <button class="blueButton">管理教材</button>
+        </div>
+
+        <br class="break1">
+        <div class="d_flex px_50 w_100 h_30 pt_30 flex_col buttom_border">
+            <p onclick="toggleContent('subContent1')">第一章xxx</p>
+
+            <div id="subContent1" class="expandable-content">
+                <p onclick="toggleContent('subContent1_1')">1.0xxx</p>
+                <div id="subContent1_1" class="expandable-content sub-content">
+                    <p>1.0.1xxx</p>
+                </div>
+            </div>
+        </div>
+        <div class="d_flex px_50 w_100 h_30 pt_30 flex_col buttom_border">
+            <p onclick="toggleContent('subContent2')">第二章xxx</p>
+
+            <div id="subContent2" class="expandable-content">
+                <p onclick="toggleContent('subContent2_2')">2.0xxx</p>
+                <div id="subContent2_2" class="expandable-content sub-content">
+                    <p>2.0.1xxx</p>
+                        <p>2.0.2xxx</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <script>
+                function toggleContent(contentId) {
+                    var contentDiv = document.getElementById(contentId);
+                    contentDiv.style.display = (contentDiv.style.display === "none") ? "block" : "none";
+                }
+            </script> 
+
+        </div>
+        <div class="center-container">
+            <button class="redButton">停開課程</button>
+        </div>
+        
+    </body>
+</html>

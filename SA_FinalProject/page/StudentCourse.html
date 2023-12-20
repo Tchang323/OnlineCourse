@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>StudentCourse</title>
+		<link rel="stylesheet" href="../style/global.css">
+	</head>
+	<body>
+        <nav class="align_center py_10 buttom_border">
+		    <ul class="d_flex px_10 justify_spacearound">
+                <li><a href="#">首頁</a></li>
+                <li>
+                    <input class="px_10 text_end input" type="text" placeholder="搜尋文字">
+                </li>
+                <li><a href="#">切換身分</a></li>
+                <li><a href="#">我的課程</a></li>
+                <li><a href="#">個人資料</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul class="d_flex px_10">
+                <li>
+                    <!-- 評分下拉式選單 -->
+                    <select class="m_10" type="smallselect">
+                        <option value="">課程名稱</option>
+                        <option value="1">由a到z</option>
+                        <option value="2">由z到a</option>
+                    </select>
+                </li>
+                <li>
+                    <!-- 類別下拉式選單 -->
+                    <select class="m_10" type="smallselect">
+                        <option value="">完成度</option>
+                        <option value="1">由高到低</option>
+                        <option value="2">由低到高</option>
+                    </select>
+                </li>
+                <li class="m_10"><a>排序方式</a></li>
+            </ul>
+        </nav>
+        <div class="d_flex flex_col px_50 justify_center">
+            <div class="d_flex mt_30 course_color">
+                <img class="h_180px py_10 px_10" src="133.png">
+                <div  class="d_flex flex_col justify_center w_100">
+                    <div class="d_flex px_50">
+                        <a class="font_20" href="#">課程名稱</a>
+                    </div> 
+                    <div class="d_flex px_50 progress_size">
+                        <progress class=" mr_20 w_95" value="50" max="100"></progress>
+                        50%
+                    </div>
+                </div>
+            </div>
+            <div class="d_flex mt_30 course_color">
+                <img class="h_180px px_10 py_10" src="133.png">
+                <div  class="d_flex flex_col justify_center w_100">
+                    <div class="d_flex px_50">
+                        <a class="font_20" href="#">課程名稱</a>
+                    </div> 
+                    <div class="d_flex px_50 progress_size">
+                        <progress class="mr_20 w_95" value="75" max="100"></progress>
+                        75%
+                    </div>
+                </div>
+            </div>
+        </div>
+</html>
