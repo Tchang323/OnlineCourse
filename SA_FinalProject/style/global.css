@@ -79,6 +79,27 @@ form {
   background-color: #aaa;
   color: white;
 }
+/*顯示提示框*/
+.tooltip {
+position:fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border: 1px solid #ccc;
+box-shadow: 0 4px 8px rgba(0, 0,0, 0.1);
+z-index: 1000;
+width:400px;
+height:200px;
+border-radius: 5px;
+text-align: center;
+}
+.tooltip-header{
+background-color:#6F74FF;
+padding-top:30px;
+width:100%;
+height:50px;
+border-radius: 5px 5px 0 0;
+}
 
 //AddNewCourse
 
@@ -101,6 +122,12 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+}
+label[type='tooltipTitle']{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
 }
 div[type='title'] {
   display: flex;
