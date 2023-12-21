@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>manageMaterial</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div>
+      <button class="switchButton">切換身份</button>
+    </div>
+    <br class="break1" />
+    <hr class="line1" />
+    <div class="center-container">
+      <h2>管理教材</h2>
+    </div>
+    <div class="center-container">
+      <!-- 下拉選單 -->
+      <div class="dropdown-container">
+        <select class="dropdown" id="chapter-select">
+          <option value="">選擇章節</option>
+          <option value="chapter1">第一章</option>
+          <option value="chapter2">第二章</option>
+          <option value="chapter3">第三章</option>
+          <!-- 其他章節選項 -->
+        </select>
+        <select class="dropdown" id="section-select">
+          <option value="">選擇小節</option>
+          <option value="section1">第一小節</option>
+          <option value="section2">第二小節</option>
+          <option value="section3">第三小節</option>
+          <!-- 其他小節選項 -->
+        </select>
+      </div>
+    </div>
+    <div class="center-container">
+      <div class="file-upload-container">
+        <input
+          type="file"
+          id="file-upload"
+          class="file-upload-input"
+          hidden
+          multiple
+          onchange="updateFilename()"
+        />
+        <label for="file-upload" class="file-upload-label">尚未選擇檔案</label>
+        <button onclick="moveToDisplayContainer()" class="upload-btn">
+          上傳檔案
+        </button>
+      </div>
+    </div>
+    <div class="center-container">
+      <div class="file-display-container">
+        <label for="file-display" class="file-display-label">已上傳檔案</label>
+        <div id="file-display" class="file-display"></div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="cancel-btn">取消</button>
+      <button class="complete-btn">完成</button>
+    </div>
+
+    <script>
+      function updateFilename() {
+        var input = document.getElementById("file-upload");
+        var label = document.querySelector(".file-upload-label");
+        var files = input.files;
+        var filenames = [];
+
+        for (var i = 0; i < files.length; i++) {
+          filenames.push(files[i].name);
+        }
+
+        label.textContent = filenames.join(", ") || "尚未選擇檔案";
+      }
+
+      function moveToDisplayContainer() {
+        var fileDisplay = document.getElementById("file-display");
+        var label = document.querySelector(".file-upload-label");
+        var filenames = label.textContent.split(", ");
+
+        if (filenames[0] !== "尚未選擇檔案") {
+          filenames.forEach(function (filename, index) {
+            var fileEntry = document.createElement("div");
+            fileEntry.innerHTML =
+              "<p>" +
+              filename +
+              " <span class='delete-btn' onclick='removeFile(" +
+              index +
+              ")'>×</span></p>";
+            fileDisplay.appendChild(fileEntry);
+          });
+          label.textContent = "尚未選擇檔案"; // 重設標籤
+        }
+      }
+
+      function removeFile(index) {
+        var fileDisplay = document.getElementById("file-display");
+        fileDisplay.removeChild(fileDisplay.children[index]);
+      }
+    </script>
+  </body>
+</html>

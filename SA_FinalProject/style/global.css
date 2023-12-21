@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body{
     font-family: Arial,sans-serif;
     font-size:16px;
@@ -18,7 +14,7 @@ form {
   align-items: center;
 }
 
-
+ /* AddNewChapter */
 .form-section label {
   display: block;
   margin-bottom: 10px;
@@ -201,7 +197,7 @@ button {
   padding: 5px 10px;
   border: none;
   margin: 5px;
-  width: 70px;
+  width: 80px;
   background-color: #6F74FF;
   color: white;
   cursor: pointer;
@@ -224,8 +220,8 @@ button:hover {
 //ManagerChapter
 .switchButton{
     float:right;
-    font-size:18px;
-    padding:10px;
+    font-size:16px;
+    padding:7px;
     background-color:white;
     color:black;
     border:none;
@@ -282,6 +278,7 @@ li.rightside{
 .blueButton{
     display: inline-block;
     padding: 8px 16px;
+    width: 130px;
     margin-left:13px;
     font-size: 18px;
     background-color: #6F74FF; /* 紫蓝色 */
@@ -301,7 +298,7 @@ li.rightside{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px; /* 或者根據需要設置 */
+  height: 55px; /* 或者根據需要設置 */
 }
 
 
@@ -405,11 +402,11 @@ li.rightside{
     border-radius: 5px; /* 圓角 */
   }
   
+  /* 将导航字体置于屏幕中央 */
   .navbar ul {
-    list-style: none;
+    flex: 1;
     display: flex;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
   }
   
   .navbar li {
@@ -653,3 +650,261 @@ select {
     margin: 0;
     border: 0;
 } */
+/*==========================Valid Course==============================*/
+
+/* 置中表格的容器 */
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* 適當的頂部邊距 */
+}
+
+/* 表格樣式 */
+table {
+  border-collapse: collapse;
+  width: 80%; /* 根據需要設置表格寬度 */
+  margin-bottom: 20px; /* 適當的底部邊距 */
+  border: 2px solid #000; /* 加粗的外框線 */
+  text-align: center;
+}
+
+th {
+  background-color: #3B3F77; /* 設定為深藍紫色 */
+  padding: 8px;
+  color: white; /* 文字顏色設為白色 */
+  border: 1px solid #000; /* 加粗的外框線 */
+}
+
+/* 第一行之外的單元格樣式 */
+td {
+  padding: 8px;
+  background-color: #f9f9f9; /* 設定單元格背景為淺灰色 */
+  border: 1px solid #000; /* 加粗的外框線 */
+}
+
+/* 條紋狀樣式 */
+tr:nth-child(even) td {
+  background-color: #EDEFF2; /* 更淺的灰色，用於交替行 */
+}
+
+/* 檢視原因按鈕 */
+.view-reason-btn {
+  padding: 5px 10px; /* 根據需要調整填充 */
+  background-color: #f2a750; /* 按鈕背景色 */
+  color: white; /* 文字顏色 */
+  border: none; /* 移除邊框 */
+  cursor: pointer; /* 鼠標懸停時顯示手指指標 */
+  border-radius: 5px; /* 按鈕邊緣圓角 */
+  font-size: 0.9em; /* 文字大小 */
+}
+
+/* 按鈕懸停效 */
+.view-reason-btn:hover {
+  background-color: #191936; /* 懸停時背景色變化 */
+}
+
+/*顯示提示框*/
+/* 在您的 tingstyle.css 文件中添加 */
+/* 在您的 tingstyle.css 文件中添加 */
+.backdrop-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 999; /* 确保它在提示框下方 */
+    display: none;
+    transition: opacity 1s ease;
+}
+
+.tooltip {
+    display: none;
+    position: fixed; /* fixed 位置会相对于视口，即始终在屏幕中间 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* 这将确保提示框确切居中 */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 400px; /* 根据您的需要调整宽度 */
+    height:150px;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+}
+
+.tooltip-header{
+    background-color: #6F74FF; /* 深蓝紫色背景 */
+    width: 100%; /* 覆盖整个提示框的宽度 */
+    height: 50px; /* 设置高度为提示框高度的三分之一 */
+    border-radius: 5px 5px 0 0; 
+    border-radius: 1px solid #000000;
+}
+
+.tooltip-header label{
+    color:white;
+    font-weight: bold;
+}
+
+.close-btn {
+    padding: 5px 10px;
+    position: absolute;
+    right: 15px; /* 按钮位于提示框的右下角 */
+    bottom: 15px;
+    background-color: #6F74FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #5458bb;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/*========================== manageMaterial ==============================*/
+
+/*下拉式選單*/
+.dropdown-container {
+    margin: 20px 0; /* 適當的間距 */
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 20px; /* 下拉選單之間的間距 */
+}
+
+.dropdown {
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #b7b1b1; /* 邊框顏色 */
+    cursor: pointer;
+}
+
+/*--------尚未選擇檔案(上傳檔案)--------*/
+.file-upload-container {
+    margin: 10px 0;
+    border: 1px solid #b7b1b1;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%; /* 設置為 100% 以使輸入框長條化 */
+    cursor: pointer;
+    background-color:white; /* 輸入框的背景色 */
+    border-radius: 5px;
+}
+.file-upload-container:hover{
+    border: 2px solid rgb(72, 72, 72);
+}
+
+.file-upload-label {
+    display: block; /* 使標籤占滿整個容器寬度 */
+    width: 50%;
+    padding: 3px;
+    overflow: hidden; /* 避免文字超出標籤 */
+    white-space: nowrap; /* 文字不換行 */
+    text-overflow: ellipsis; /* 文字過長時顯示省略號 */
+    text-align: left; /* 文字對齊到左邊 */
+    margin-left: 10px; /* 和文件選擇按鈕保持一定間隔 */
+    border-radius: 5px;
+}
+
+.upload-btn {
+    padding: 5px 15px;
+    background-color: #6F74FF; /* 按鈕背景色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.upload-btn:hover{
+    background-color: #5458bb;
+}
+
+/*----------已上傳檔案--------------*/
+.file-display-container {
+    margin-top: 300px;
+    width:40%;
+    height: 300px; 
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    max-height: 300px; /* 限制最大高度，您可以根據需要調整這個值 */
+    overflow-y: auto; /* 當內容超出高度時顯示垂直滾動條 */
+}
+
+.file-display {
+    white-space: nowrap;
+    overflow: auto; /* 允許滾動條出現，如果檔案名稱過長的話 */
+}
+
+.file-display-label {
+    padding: 10px;
+    display: block; /* 確保標籤在其自己的行 */
+    margin-bottom: 5px;
+    background-color: #cde2ff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.file-display p {
+    padding: 10px;
+    margin: 5px 0; /* 給文件名稱一些間距 */
+}
+
+/* 容器的樣式，用於按鈕的定位 */
+.button-container {
+    position: fixed;
+    left: 50%; /* 將容器移動到視窗的中心 */
+    bottom: 300px; /* 距離頁面底部的距離 */
+    transform: translateX(-50%); /* 將容器向左移動自身寬度的一半，以確保居中 */
+    display: flex;
+    gap: 150px; /* 按鈕之間的間隔 */
+    font-size: 16px;
+}
+
+/* 取消按鈕的樣式 */
+.cancel-btn {
+    padding: 5px 15px;
+    background-color: #969292; 
+    color: white; /* 文字顏色 */
+    border: none;
+    border-radius: 5px; /* 圓角邊框 */
+    cursor: pointer;
+}
+
+/* 完成按鈕的樣式 */
+.complete-btn {
+    padding: 5px 15px;
+    background-color: #6F74FF; /*Figma purple*/
+    color: white; /* 文字顏色 */
+    border: none;
+    border-radius: 5px;
+}
+
+.complete-btn:hover {
+    background-color: #5458bb;
+}
+
+.cancel-btn:hover{
+    background-color: #656161; 
+}
+
+.delete-btn {
+    color: red;
+    cursor: pointer;
+    font-size: 20px; /* 增加字體大小 */
+    font-weight: bold; /* 使字體加粗 */
+    float:right;
+    padding-right: 20px;
+}
+
+.delete-btn:hover {
+    opacity: 0.7;
+}
