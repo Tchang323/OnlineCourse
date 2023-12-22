@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Chapter</title>
+        <link rel="stylesheet" href="../style/global.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <div>
+           <button class="switchButton">切換身份</button>   
+        </div>
+        <br class="break1">
+        <hr class="line1"> 
+        <br class="break1">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>課程名稱</th>
+                    <th>上傳日期</th>
+                    <th>審核狀態</th>
+                    <th>檢視原因</th>
+                    <th>審核的管理員名稱</th>
+                </tr>
+                <tr>
+                    <td>課程一資訊</td>
+                    <td>日期一</td>
+                    <td>狀態一</td>
+                    <td><button class="view-reason-btn" onclick="showTooltip('原因一')">檢視原因</button></td>
+                    <td>管理員一</td>
+                </tr>
+                <tr>
+                    <td>課程二資訊</td>
+                    <td>日期二</td>
+                    <td>狀態二</td>
+                    <td><button class="view-reason-btn" onclick="showTooltip('原因二')">檢視原因</button></td>
+                    <td>管理員二</td>
+                </tr>
+                <tr>
+                    <td>課程三資訊</td>
+                    <td>日期三</td>
+                    <td>狀態三</td>
+                    <td><button class="view-reason-btn" onclick="showTooltip('原因三')">檢視原因</button></td>
+                    <td>管理員三</td>
+                </tr>
+                <tr>
+                    <td>課程四資訊</td>
+                    <td>日期四</td>
+                    <td>狀態四</td>
+                    <td><button class="view-reason-btn" onclick="showTooltip('原因四')">檢視原因</button></td>
+                    <td>管理員四</td>
+                </tr>
+            </table>
+        </div>
+        <!-- 提示框结构 -->
+        <div class="backdrop-blur" id="backdrop"></div>
+            <div id="tooltip" class="tooltip">
+                <div class="tooltip-header">
+                    <label>審核失败</label>
+                </div>
+                <p id="reason">審核失敗原因</p>
+                <button onclick="hideTooltip()" class="close-btn">關閉</button>
+            </div>
+        </div>
+
+        <script>
+            function showTooltip(reason) {
+                var tooltip = document.getElementById('tooltip');
+                var backdrop = document.getElementById('backdrop');
+                var reasonParagraph = document.getElementById('reason');
+
+                reasonParagraph.textContent = reason; // 设置原因文本
+                tooltip.style.display = 'block'; // 显示提示框
+                backdrop.style.display = 'block'; // 显示模糊背景
+            }
+
+            function hideTooltip() {
+                var tooltip = document.getElementById('tooltip');
+                var backdrop = document.getElementById('backdrop');
+
+                tooltip.style.display = 'none'; // 隐藏提示框
+                backdrop.style.display = 'none'; // 隐藏模糊背景
+            }
+
+        </script>
+    </body>
+</html>

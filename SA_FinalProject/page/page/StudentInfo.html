@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>StudentInfo</title>
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+
+  <nav class="align_center py_10 buttom_border">
+    <ul class="d_flex px_10 justify_spacearound">
+      <li><a href="#">首頁</a></li>
+      <li>
+        <input
+          class="px_10 text_end input"
+          type="text"
+          placeholder="搜尋文字"
+        />
+      </li>
+      <li><a href="#">切換身分</a></li>
+      <li><a href="#">我的課程</a></li>
+      <li><a href="#">個人資料</a></li>
+    </ul>
+  </nav>
+  <form method="post">
+    <div class="flex" type="title">
+      <label>個人資料</label>
+    </div>
+    <div class="form-section">
+      <label for="student-name">姓名</label>
+      <div class="flex">
+        <input
+          type="text"
+          id="student-name"
+          name="student-name"
+          placeholder="輸入姓名"
+        />
+        <button type="button">修改</button>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="student-number">個人簡介</label>
+      <div class="flex-bottom">
+        <textarea
+          type="message"
+          id="message"
+          name="message"
+          placeholder="輸入個人簡介"
+        ></textarea>
+        <button type="button">修改</button>
+      </div>
+    </div>
+    <div class="flex" type="title">
+      <label>帳號資訊</label>
+    </div>
+
+    <div class="form-section">
+      <label for="class-name">電子郵件</label>
+      <div class="flex">
+        <input type="text" placeholder="輸入電子郵件" />
+        <button type="button">修改</button>
+      </div>
+    </div>
+
+    <hr class="line1" />
+
+    <div class="form-section">
+      <label for="class-name">密碼</label>
+      
+      <div class="flex-bottom ">
+        <div class="flex_col">
+            <input type="password" placeholder="輸入密碼" />
+            <input type="password" placeholder="再次輸入密碼" />
+        </div>
+       
+        <button type="button">修改</button>
+      </div>        
+    
+    <hr class="line1" />
+    <div class="form-buttons">
+      <button type="delete">刪除</button>
+      <button type="submit">提交</button>
+    </div>
+  </form>
+</html>
